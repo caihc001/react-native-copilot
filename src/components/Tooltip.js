@@ -33,24 +33,24 @@ const Tooltip = ({
       {
         !isLastStep ?
           <TouchableOpacity onPress={handleStop}>
-            <Button>Skip</Button>
+            <Button>{currentStep.language === 'zh'? '跳过' : 'Skip'}</Button>
           </TouchableOpacity>
           : null
       }
       {
         !isFirstStep ?
           <TouchableOpacity onPress={handlePrev}>
-            <Button>Previous</Button>
+            <Button>{currentStep.language === 'zh'? '上一步' : 'Previous'}</Button>
           </TouchableOpacity>
           : null
       }
       {
         !isLastStep ?
           <TouchableOpacity onPress={handleNext}>
-            <Button>Next</Button>
+            <Button>{currentStep.language === 'zh'? '下一步' : 'Next'}</Button>
           </TouchableOpacity> :
           <TouchableOpacity onPress={handleStop}>
-            <Button>Finish</Button>
+            <Button>{currentStep.language === 'zh'? '完成' : 'Finish'}</Button>
           </TouchableOpacity>
       }
     </View>
