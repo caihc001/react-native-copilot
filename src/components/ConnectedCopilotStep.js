@@ -16,6 +16,7 @@ class ConnectedCopilotStep extends Component<Props> {
     this.props._copilot.registerStep({
       name: this.props.name,
       text: this.props.text,
+      language: this.props.language,
       order: this.props.order,
       target: this,
       wrapper: this.wrapper,
